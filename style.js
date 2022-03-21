@@ -15,52 +15,52 @@ const ciurmaMugiwara = [
     {
         nome: 'Monkey D.Luffy',
         ruolo: 'Capitano',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/luffy.png'
     },
     {
         nome: 'Roronoa Zoro',
         ruolo: 'Spadaccino',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/zoro.png'
     },
     {
         nome: 'Vinsmoke Sanji',
         ruolo: 'Cuoco',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/sanji.png'
     },
     {
         nome: 'Nami',
         ruolo: 'Cartografa',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/nami.png'
     },
     {
         nome: 'God Usopp',
         ruolo: 'Cecchino',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/usop.png'
     },
     {
         nome: 'Chopper',
         ruolo: 'Medico',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/chopper.png'
     },
     {
         nome: 'Franky',
         ruolo: 'Carpentiere',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/franky.png'
     },
     {
         nome: 'Brook',
         ruolo: 'Musicista',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/brook.png'
     },
     {
         nome: 'Nico Robin',
         ruolo: 'Archeologa',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/nico-robin.png'
     },
     {
         nome: 'Jinbe',
         ruolo: 'Timoniere',
-        immagine: 'img/angela-caroll-chief-editor.jpg'
+        immagine: 'img/jinbe.png'
     },
 
 ];
@@ -78,10 +78,16 @@ function creazioneDom(personaggioDom) {
 
     // aggiungo la classe all'elemento carta 
     contenitoreCarte.classList.add('team-card');
+    // creo il contenitore dell'immagine 
+    const contenitoreImmagine = document.createElement('div');
+    // aggiungo una classe all'elemento contenitore immagine 
+    contenitoreImmagine.classList.add('card-image');
+    // appendo l'elemento al div team card 
+    contenitoreCarte.appendChild(contenitoreImmagine);
     // creo elemento immagine 
     const elementoImmagine = document.createElement('img');
     // Nel div carta appendo l'elemento immagine 
-    contenitoreCarte.appendChild(elementoImmagine);
+    contenitoreImmagine.appendChild(elementoImmagine);
     // all'elemento immagine vado a inserire l'img dell'oggetto
     elementoImmagine.src = personaggioDom.immagine;
     // Creo il div che conterrà tag h3 e tag p 
