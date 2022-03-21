@@ -92,14 +92,24 @@ function creazioneDom(personaggioDom) {
     contenitoreCarte.appendChild(contenitoreTesto);
     // creo un nuovo elemento che sarà il nome della carta 
     const nomePersonaggio = document.createElement('h3');
-
+    // appendo l'elemendo creato al contenitore testo 
     contenitoreTesto.appendChild(nomePersonaggio);
+    // all'elemento nomePersonaggio vado ad inserire il nome dell'oggetto 
+    nomePersonaggio.innerText = personaggioDom.nome;
+    // creo un nuovo elemento che sarà il ruolo della carta 
+    const ruoloPersonaggio = document.createElement('p');
+    // appendo l'elemendo creato al contenitore testo
+    contenitoreTesto.appendChild(ruoloPersonaggio);
+    // all'elemento ruoloPersonaggio vado ad inserire il ruolo dell'oggetto 
+    ruoloPersonaggio.innerText = personaggioDom.ruolo;
 
 }
 
 
 for (let i = 0; i < ciurmaMugiwara.length; i++) {
+
     const personaggio = ciurmaMugiwara[i];
+
     creazioneDom(personaggio);
 }
 
